@@ -1,0 +1,20 @@
+$icons: (
+    "book":"\f2b9",
+    "tool": "\e988",
+    "mobile": "\e967",
+    "wine": "\e990",
+    "lightbulb": "\e95e",
+    "compa": "\e93d",
+    "telescope": "\e985",
+    "layer": "\e95c",
+    "computer":"\e8e4",
+    "database":"\e8ea",
+    "line":"\e95f"
+);
+
+// icon
+@each $name, $code in $icons {
+    .icon-#{$name}::before {
+        content: $code;
+    }
+} ;

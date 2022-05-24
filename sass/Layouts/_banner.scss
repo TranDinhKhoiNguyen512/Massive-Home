@@ -1,0 +1,55 @@
+.banner {
+    background-image: url("../img/index-banner-2.jpg") !important;
+    @extend %backgroundImg;
+    position: relative;
+    height: 736px;
+    .banner__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        h1 {
+            @include styleText($white-0, $fs-7, $fw-5);
+            letter-spacing: $ls-1;
+            margin-bottom: 0;
+            line-height: normal;
+        }
+        h3 {
+            @include styleText($white-0, $fs-1, $fw-0);
+            letter-spacing: $ls-1 + 1;
+            margin-bottom: 0;
+            line-height: $lh-0;
+        }
+    }
+
+    @include responsive("large") {
+        .banner__content {
+            width: 750px;
+            h3 {
+                letter-spacing: $ls-1;
+            }
+        }
+    }
+    @include responsive("medium") {
+        .banner__content {
+            width: 750px;
+            h3 {
+                font-size: $fs-0 + 3;
+            }
+            h1 {
+                font-size: $fs-3;
+            }
+        }
+    }
+    @include responsive("small") {
+        .banner__content {
+            width: 340px;
+        }
+    }
+    @media screen and (min-width: 576px) and (max-width: 798px) {
+        .banner__content {
+            width: 540px;
+        }
+    }
+}

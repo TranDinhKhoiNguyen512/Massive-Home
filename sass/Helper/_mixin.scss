@@ -1,0 +1,32 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleButton($color, $pd-y, $pd-x, $bg-color, $ls) {
+    color: $color;
+    padding: $pd-y $pd-x;
+    background-color: $bg-color;
+    letter-spacing: $ls;
+}
+
+// ParseRem
+@function parseRem($default, $val) {
+    $rem: $val / $default;
+    @return #{$rem}rem;
+}
+
+// Responsive
+@mixin responsive($screen) {
+    @if map-has-key($map: $breakpoints, $key: $screen) {
+        $value: map-get(
+            $map: $breakpoints,
+            $key: $screen,
+        );
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "`{$screen}` is'nt exist in breakpoints ";
+    }
+}

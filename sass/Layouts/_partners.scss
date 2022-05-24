@@ -1,0 +1,27 @@
+.partners {
+    .partners__box {
+        display: flex;
+        justify-content: center;
+        .partners__item {
+            margin: $mg-2 - 5;
+            img {
+                display: block;
+                width: 145px;
+                height: auto;
+            }
+        }
+    }
+    @include responsive("extra-large") {
+        .container {
+            max-width: 100%;
+        }
+        .partners__box {
+            .partners__item {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

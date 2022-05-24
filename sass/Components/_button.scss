@@ -1,0 +1,26 @@
+.m--button{
+    @include styleButton($white-0,$pd-1 + 5, $pd-3, $black-4, $ls-1 - 4);
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: $fs-0 - 1 ;
+    white-space: nowrap;
+    transition: 0.5s;
+    &:hover{
+        color: $white-0;
+        background-color: $yellow-0;
+    }
+}
+
+
+.m2--button{
+    @include styleButton($white-0,$pd-1 + 5, $pd-3, $yellow-0, $ls-1 - 4);
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: $fs-0 - 1 ;
+    white-space: nowrap;
+    transition: 0.5s;
+    &:hover{
+        color: $black-4;
+        background-color: $white-0;
+    }
+}

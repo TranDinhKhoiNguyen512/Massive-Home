@@ -1,0 +1,77 @@
+.design {
+    .design__heading {
+        margin-bottom: $mg-9;
+    }
+    .row {
+        .col-lg-4 {
+            padding-right: $pd-3;
+            padding-left: $pd-3;
+            .box {
+                position: relative;
+                padding: $pd-3;
+                border: 1px solid $white-1;
+                border-radius: 4px;
+                &:hover .icon {
+                    background-color: $yellow-0;
+                }
+                .icon {
+                    position: absolute;
+                    top: -30px;
+                    left: 30px;
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    border-radius: 4px;
+                    background: $black-4;
+                    box-shadow: 0 0 0 10px $white-0;
+                    line-height: $lh-2;
+                    transition: all 0.5s;
+                    i {
+                        font-size: $fs-3;
+                        line-height: 60px;
+                        text-align: center;
+                        color: $white-0;
+                    }
+                }
+                .design__title {
+                    display: inline-block;
+                    margin-top: $mg-3;
+                    text-transform: uppercase;
+                    h4 {
+                        margin-bottom: $mg-2 - 5;
+                        letter-spacing: $ls-1 - 4;
+                        font-weight: $fw-0;
+                        font-size: $fs-0 + 3;
+                    }
+                }
+                .desc {
+                    @include styleText($gray-0, $fs-0, $fw-0);
+                    text-align: left;
+                }
+            }
+        }
+    }
+    @include responsive("large") {
+        .row {
+            .box {
+                margin-bottom: $mg-5;
+            }
+        }
+    }
+    @include responsive("medium") {
+        .heading {
+            p {
+                width: 80%;
+            }
+            h3{
+                font-size: $fs-1 - 2;
+            }
+        }
+        .container{
+            max-width:100% ;
+        }
+    }
+    @include responsive("small") {
+
+    }
+}

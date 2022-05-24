@@ -1,0 +1,74 @@
+.comments {
+    .container {
+        display: flex;
+        justify-content: center;
+
+        .number__box {
+            position: relative;
+            padding-left: $pd-3;
+            padding-right: $pd-3;
+            width: 780px;
+            .comments__item {
+                text-align: center;
+                margin: $mg-2 - 5;
+                margin: 0 auto;
+                .comments__img {
+                    img {
+                        margin: 0 auto;
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        margin-bottom: $mg-2 - 5;
+                    }
+                }
+                .comments__text {
+                    font-size: $fs-0 + 1;
+                    font-style: italic;
+                    line-height: $lh-1;
+                    margin: 0 0 $mg-3;
+                    color: $gray-0;
+                    .comments__name {
+                        margin-top: $mg-1;
+                        letter-spacing: $ls-1 - 3;
+                        text-transform: uppercase;
+                        color: $black-4;
+                        font-size: $fs-0 - 1;
+                        font-style: normal;
+                        height: 50px;
+                        span {
+                            display: block;
+                            color: $gray-9;
+                            font-size: $fs-0 - 3;
+                        }
+                    }
+                }
+            }
+        }
+
+        .owl-theme {
+            .owl-dots {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    @include responsive ("medium"){
+        .container{
+            max-width: 100%;
+            .number__box{
+                width: 540px;
+            }
+        }
+    }
+    @include responsive ("small"){
+        .container{
+            max-width: 100%;
+            .number__box{
+                width: 340px;
+            }
+        }
+    }
+}
